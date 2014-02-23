@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="backarea">
+    <a href="/transaction">&lt; Back</a>
+  </div>
+
+  <div class="main">
+    <h2>FUNDING OPTIONS</h2>
+
+    <div class="pay-options">
+      <a href="/manage/{{ transaction.manage_uuid }}/fund/card"><img src="/static/card.jpg" /></a>
+      <a href="/manage/{{ transaction.manage_uuid }}/fund/direct"><img src="/static/bank.jpg" /></a>
+      <a href="/manage/{{ transaction.manage_uuid }}/fund/paypal"><img src="/static/paypal.jpg" /></a>
+      <a href="/manage/{{ transaction.manage_uuid }}/fund/bitcoin"><img src="/static/bitcoin.jpg" /></a>
+    </div>
+  </div>
+{% endblock %}

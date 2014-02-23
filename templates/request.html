@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="backarea">
+    <a href="/">&lt; Back</a>
+  </div>
+  <div class="main">
+    <h2>REQUEST ESCROW</h2>
+    <div class="inputs">
+      <form action="transaction" method="post">
+        <input type="email" placeholder="Payer Email" name="receiver" />
+        <input type="number" placeholder="$ Amount" name="value" />
+        <input class="des" placeholder="Description" type="text" name="description" />
+        <input type="submit" value="" />
+      </form>
+    </div>
+  </div>
+{% endblock %}

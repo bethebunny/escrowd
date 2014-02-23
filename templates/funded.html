@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>FUNDED</h1>
+  <h3>Funds successfully transferred into escrow via {{ option }}.</h3>
+  <div class="main">
+    <a href="/manage/{{ transaction.manage_uuid }}"><img src="/static/view.jpg" /></a>
+    <p><a href="/transaction/{{ transaction.read_uuid }}">Proof of escrow</a></p>
+    <a class="book" href="#">Bookmark</a>
+  </div>
+{% endblock %}

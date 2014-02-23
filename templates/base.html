@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Escrowd</title>
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+    <link href="/static/style.css" rel="stylesheet" type="text/css" />
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <div id="wrapper">
+      <img src="/static/crow.png" class="logo"/> 
+      {% block body %} {% endblock %}
+    </div>
+  </body>
+</html>

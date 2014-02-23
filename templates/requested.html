@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>REQUESTED</h1>
+  <div class="main">
+    <a href="funded-view.html"><img src="/static/view.jpg" /></a>
+    <p><a href="/transaction/{{ transaction.read_uuid }}">Proof of escrow</a></p>
+    <a class="book" href="#">Bookmark</a>
+  </div>
+{% endblock %}
