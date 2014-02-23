@@ -1,0 +1,16 @@
+<html>
+  <head></head>
+  <body>
+    {% if not transaction.in_escrow %}
+      <h1>Warning! Transaction not in escrow!</h1>
+    {% endif %}
+    Value of transaction: {{ transaction.value }}
+    Description: <p>{{ transaction.description }}</p>
+    {% if transaction.completed %}
+      <h1>Transaction was completed successfully!</h1>
+    {% else %}
+      <button>Release funds</button>
+      <button>Request refund</button>
+    {% endif %}
+  </body>
+</html>
