@@ -6,8 +6,15 @@ from sqlalchemy.ext import declarative as orm_dcl
 
 
 db = sqlalchemy.create_engine('sqlite:///escrow.db')
-_session = orm.sessionmaker(bind=db)
+__session = orm.sessionmaker(bind=db)
 
+__session_obj = None
+
+def _session():
+  global __session_obj
+  if not __session_obj:
+    __session_obj = __session()
+  return __session_obj
 
 Base = orm_dcl.declarative_base()
 
