@@ -1,11 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'crow.html' %}
 
 {% block body %}
   <h1>${{ transaction.value }}</h1>
   <p>{{ transaction.description }}</p>
     <p><a href="/transaction/{{ transaction.read_uuid }}">Proof of escrow</a></p>
   <div class="main">
-    <a href="/manage/{{ transaction.manage_uuid }}"><img src="/static/release.jpg" /></a></br>
+    <a href="/manage/{{ transaction.manage_uuid }}/release"><img src="/static/release.jpg" /></a></br>
     <a class="book" href="/manage/{{ transaction.manage_uuid }}/refund">Request Refund</a>
     <h3>BOOKMARK THIS PAGE!</h3>
     This page is your only way to access the escrow, so don't lose it!
